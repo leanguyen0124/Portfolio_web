@@ -131,7 +131,6 @@ def contact():
             description = request.form.get('description')
             action = request.form.get('action')
 
-            # Lấy list dynamic hiện tại
             kpi_list = request.form.getlist('kpis[]')
             graph_descs = request.form.getlist('graph_desc[]')
             graph_types = request.form.getlist('graph_type[]')
