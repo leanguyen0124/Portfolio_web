@@ -1,0 +1,98 @@
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://192.168.150.102:8000
+Press CTRL+C to quit
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 521-078-505
+192.168.150.102 - - [10/Jan/2026 16:11:32] "GET / HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "D:\Web port\LeaWeb\.venv\Lib\site-packages\flask\app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Web port\LeaWeb\.venv\Lib\site-packages\flask\app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+  File "D:\Web port\LeaWeb\.venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\Web port\LeaWeb\.venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\Web port\LeaWeb\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\Web port\LeaWeb\.venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\Web port\LeaWeb\ByLea.py", line 37, in home
+    return render_template('./pages/home.html')
+  File "D:\Web port\LeaWeb\.venv\Lib\site-packages\flask\templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "D:\Web port\LeaWeb\.venv\Lib\site-packages\flask\templating.py", line 131, in _render
+    rv = template.render(context)
+  File "D:\Web port\LeaWeb\.venv\Lib\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\Web port\LeaWeb\.venv\Lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "D:\Web port\LeaWeb\templates\pages\home.html", line 8, in top-level template code
+    {% include 'base/navbar.html' %}
+    ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Web port\LeaWeb\templates\base\navbar.html", line 11, in top-level template code
+    <li><a id="menu-blog" href="{{ url_for('blog')}}">BLOG</a></li>
+    ^^^^^^^^^
+  File "D:\Web port\LeaWeb\.venv\Lib\site-packages\flask\app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Web port\LeaWeb\.venv\Lib\site-packages\flask\app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+    
+  File "D:\Web port\LeaWeb\.venv\Lib\site-packages\werkzeug\routing\map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'blog'. Did you mean 'home' instead?
+192.168.150.102 - - [10/Jan/2026 16:11:32] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 304 -
+192.168.150.102 - - [10/Jan/2026 16:11:32] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 304 -
+127.0.0.1 - - [10/Jan/2026 16:17:42] "GET / HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "D:\Web port\LeaWeb\.venv\Lib\site-packages\flask\app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Web port\LeaWeb\.venv\Lib\site-packages\flask\app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+  File "D:\Web port\LeaWeb\.venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\Web port\LeaWeb\.venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\Web port\LeaWeb\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\Web port\LeaWeb\.venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\Web port\LeaWeb\ByLea.py", line 37, in home
+    return render_template('./pages/home.html')
+  File "D:\Web port\LeaWeb\.venv\Lib\site-packages\flask\templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "D:\Web port\LeaWeb\.venv\Lib\site-packages\flask\templating.py", line 131, in _render
+    rv = template.render(context)
+  File "D:\Web port\LeaWeb\.venv\Lib\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\Web port\LeaWeb\.venv\Lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "D:\Web port\LeaWeb\templates\pages\home.html", line 8, in top-level template code
+    {% include 'base/navbar.html' %}
+    ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Web port\LeaWeb\templates\base\navbar.html", line 11, in top-level template code
+    <li><a id="menu-blog" href="{{ url_for('blog')}}">BLOG</a></li>
+    ^^^^^^^^^
+  File "D:\Web port\LeaWeb\.venv\Lib\site-packages\flask\app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Web port\LeaWeb\.venv\Lib\site-packages\flask\app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+    
+  File "D:\Web port\LeaWeb\.venv\Lib\site-packages\werkzeug\routing\map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'blog'. Did you mean 'home' instead?
+127.0.0.1 - - [10/Jan/2026 16:17:42] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 304 -
+127.0.0.1 - - [10/Jan/2026 16:17:42] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 304 -
+127.0.0.1 - - [10/Jan/2026 16:17:42] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=09cAERvmrk63lOfQJpyQ HTTP/1.1" 200 -
+ * Detected change in 'D:\\Web port\\LeaWeb\\ByLea.py', reloading

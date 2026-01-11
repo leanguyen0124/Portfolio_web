@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/******************************/
+/*         BODY STYLES        */
+/******************************/
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0; /* Reset padding to 0 globally, add specific padding to pages if needed */
+    overflow-x: hidden; /* Prevent horizontal scrollbar */
+    background-color: #f5f5f5;
+}
+
+
+/******************************/
+/*           NAVBAR           */
+/******************************/
+
+.navbar {
+    position: fixed; /*Cố định thanh navbar ở trên cùng và sẽ chèn lên các phần khác khi cuộn trang*/
+    top: 0; /*Cố định thanh navbar ở trên cùng*/
+    left: 0;
+    width: 100%;
+    margin: 0;
+    min-height: 50px;
+    border: 1px solid #ccc;
+    border-width: 0 0 0px; /*Chỉ tạo viền dưới*/
+    /* background-color: #a855f7; */
+    font-size: 15px;
+    z-index: 10;
+}
+
+/* .navbar a {
+    color: #000;
+}
+
+/* Navbar containers */
+
+.navbar-container {
+    padding-left: 20px; /*Căn lề bên trái*/
+    padding-right: 20px;
+}
+
+.navbar-left {
+    float: left; /*Căn lề bên trái*/
+    margin-top: 10px; /*Cách lề trên 10px*/
+}
+
+.navbar-right {
+    margin-top: 10px;
+    float: right;
+}
+
+/* Left-side content */
+
+/* #logo-image {
+    float: left;
+    width: 30px;
+    height: 30px;
+}
+
+#logo-image svg {
+    stroke: orange;
+} */
+
+#logo-name{
+    float: right;
+    font-size: 20px;
+    margin-left: 0px;
+    margin-top: -2px;
+    color: whitesmoke;
+}
+
+/* Right-side content */
+
+.navbar-list {
+ 	list-style-type: none; /*Xóa dấu chấm đầu dòng*/
+}
+
+.navbar-list li {
+    float: left;
+ 	margin-left: 20px;
+}
+
+.navbar-list a {
+    text-decoration: none; /*Xóa gạch chân*/
+    color: whitesmoke;
+    padding-bottom: 1px;
+}
+
+.navbar-list a:hover {
+    color: purple;
+}
+
+.menu-selected {
+    border-bottom: solid 2px purple;
+    color: purple;
+} 
+
+/******************************/
+/*           FOOTER           */
+/******************************/
+
+.site-footer {
+    background-color: #1a1a1a; /* Màu nền tối */
+    color: #ffffff;
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+
+.footer-container {
+    display: flex; /* Sử dụng Flexbox để chia cột */
+    justify-content: space-between; /* Căn đều khoảng cách giữa các cột */
+    flex-wrap: wrap; /* Tự xuống dòng trên màn hình nhỏ */
+    max-width: 1200px;
+    margin: 0 auto; /* Căn giữa màn hình */
+    padding: 0 20px;
+}
+
+.footer-col {
+    flex: 1; /* Mỗi cột chiếm độ rộng bằng nhau */
+    min-width: 250px; /* Đảm bảo không bị co quá nhỏ */
+    margin-bottom: 20px;
+    padding-right: 20px;
+}
+
+/* Style cho tiêu đề cột */
+.footer-col h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #a855f7; /* Màu tím chủ đạo */
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+
+.social-links a {
+    display: inline-block;
+    margin-right: 15px;
+    color: #ccc;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #fff;
+}
+
+
+.footer-col.links ul {
+    list-style: none; /* Bỏ dấu chấm đầu dòng */
+    padding: 0;
+}
+
+.footer-col.links ul li {
+    margin-bottom: 10px;
+}
+
+.footer-col.links ul li a {
+    color: #ccc;
+    text-decoration: none;
+    transition: padding-left 0.3s;
+}
+
+.footer-col.links ul li a:hover {
+    color: #fff;
+    padding-left: 5px; /* Hiệu ứng đẩy nhẹ sang phải khi hover */
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+    color: #ccc;
+}

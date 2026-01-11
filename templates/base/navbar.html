@@ -1,0 +1,19 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+
+<nav class="navbar">
+    <div class="navbar-container">
+        <div class="navbar-left">
+            <a href="{{ url_for('home') }}">
+                <div id="logo-name">LEA NGUYEN</div>
+            </a>
+        </div>
+        <div class="navbar-right">
+            <ul class="navbar-list">
+                <li><a id="menu-portfolio" href="{{ url_for('portfolio')}}">PORTFOLIO</a></li>
+                <li><a id="menu-contact" href="{{ url_for('contact')}}">CONTACT</a></li>
+                <li><a id="menu-blog" href="{{ url_for('blog')}}">BLOG</a></li>
+            </ul>
+        </div>
+    </div>
+
+</nav>
